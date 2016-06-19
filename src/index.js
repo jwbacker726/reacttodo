@@ -13,12 +13,14 @@ import { render } from 'react-dom';
 import { Router, browserHistory } from 'react-router';
 
 import routes from './routes';
+import {loadCourses} from './actions/courseActions';
 
 // Webpack will bundle these files for us
 import './styles/styles.css';  // Webpack can import CSS files too!
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const store = configureStore();
+store.dispatch(loadCourses());
 
 render(
   <Provider store={store}>

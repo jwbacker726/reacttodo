@@ -1,3 +1,4 @@
+import * as types from './actionTypes';
 
 // this is called an "Action creator"
 // (a conveniance function)
@@ -6,5 +7,5 @@ export function createCourse(course) {
   // like this anymore (because the right side is the same as the left)
   // return { type: 'CREATE_COURSE', course: course };
   // This is an ES6 feature called "short-hand property names"
-  return { type: 'CREATE_COURSE', course };
+  return { type: types.CREATE_COURSE, course };
 }

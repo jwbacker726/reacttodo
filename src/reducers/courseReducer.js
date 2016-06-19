@@ -1,9 +1,11 @@
+import * as types from '../actions/actionTypes';
+
 // A reducer is just a function that accepts a state
 // and an action and then returns a new state
 
 export default function courseReducer(state = [], action) {
   switch (action.type) {
-    case 'CREATE_COURSE':
+    case types.CREATE_COURSE:
       // We can't do this because state is immutable:
       // state.push(action.course);
       // return state;
